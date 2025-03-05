@@ -14,7 +14,7 @@ const [data,setData]=useState([])
 
 useEffect(()=>{
    const fetchdata=async()=>{
-      await axios.get('https://mernback-main.onrender.com/data').then((item)=>{setData(item.data)})
+      await axios.get('https://mernback-main-1.onrender.com/data').then((item)=>{setData(item.data)})
    };fetchdata()
 },[]);
 
@@ -26,7 +26,7 @@ function handleClick(e){
       if(data[i].id === Number(userId)){
          data[i].amount=Number(data[i].amount)+Number(dep);
          updateData={amount:data[i].amount};
-         let url=`https://mernback-main.onrender.com/update/${data[i]._id}`
+         let url=`https://mernback-main-1.onrender.com/update/${data[i]._id}`
           axios.put(url,updateData);
           alert(`Rs.${dep} Amount Credited on Your Account`)
       }
