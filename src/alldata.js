@@ -6,7 +6,7 @@ import {Table,Button} from 'react-bootstrap'
 export default function Alldata(){
   
   const [data,setData]=useState([])
-  const [editId , setEditId ] = useState(NULL);
+  const [editId , setEditId ] = useState();
   let [formData, setFormData] = useState({ name: "", email: "", password: "", amount: "" });
  
 
