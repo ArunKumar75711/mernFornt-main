@@ -20,7 +20,7 @@ export default function Create(){
       //   let data=[...userData,{id:accountNo,name:name,email:email,password:password,amount:amount}];
          // setUserData(data);
          let data={id:accountNo,name:name,email:email,password:password,amount:amount};
-         axios.post("https://mernback-main.onrender.com/create",data)
+         axios.post("https://mernback-main-1.onrender.com",data)
          alert("Your New Account Created SuccessFully");
        
       }
