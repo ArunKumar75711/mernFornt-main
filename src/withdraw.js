@@ -12,7 +12,7 @@ export default function Withdraw(){
     const [data,setData]=useState([])
     useEffect(()=>{
         const fetchdata=async()=>{
-           await axios.get('https://mernback-zh3d.onrender.com/data').then((item)=>{setData(item.data)})
+           await axios.get('https://mernback-main.onrender.com/data').then((item)=>{setData(item.data)})
         };fetchdata()
      },[]);
 
