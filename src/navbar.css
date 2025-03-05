@@ -1,0 +1,36 @@
+.customHover:hover::after {
+    content: 'Create Account';  
+    position: absolute;
+    background-color:grey;  
+    padding: 5px;
+    color:white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .customHover1:hover::after {
+    content: 'Deposit Amount';  
+    position: absolute;
+    color:white;
+    background-color:grey;  
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .customHover2:hover::after {
+    color:white;
+    content: 'Withdraw  Amount';  
+    position: absolute;
+    background-color:grey;  
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .customHover3:hover::after {
+    color:white;
+    content: 'All data details';  
+    position: absolute;
+    background-color:grey;  
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
