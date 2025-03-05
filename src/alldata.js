@@ -10,13 +10,13 @@ export default function Alldata(){
 
   useEffect(()=>{
     const fetchdata=async()=>{
-       await axios.get('https://mernback-zh3d.onrender.com/data').then((item)=>{setData(item.data)})
+       await axios.get('https://mernback-main.onrender.com/data').then((item)=>{setData(item.data)})
     };fetchdata()
  },[]);
    
   function handleDelete(index){
     let DeleteArray=[...data];
-    axios.delete(`https://mernback-zh3d.onrender.com/delete/${DeleteArray[index]._id}`);
+    axios.delete(`https://mernback-main.onrender.com/delete/${DeleteArray[index]._id}`);
     alert(`Account ${DeleteArray[index].id} Delete from Database `)
     DeleteArray.splice(index,1);
     setData(DeleteArray);
