@@ -56,7 +56,7 @@ export default function Alldata(){
           <th>Email</th>
           <th>Password</th>
           <th>Balance</th>
-          <th>Delete-Option</th>
+          <th>Delete-Option and Edit</th>
         </tr>
       </thead>
       <tbody>
