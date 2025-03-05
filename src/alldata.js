@@ -33,7 +33,7 @@ export default function Alldata(){
 
   async function handleUpdate() {
     try {
-      await axios.put(`https://bank-server-9hgu.onrender.com/update/${editId}`, formData);
+      await axios.put(`https://mernback-main-1.onrender.com/update/${editId}`, formData);
       setData(data.map((item) => (item._id === editId ? { ...item, ...formData } : item)));
       setEditId(null);
       alert("Updated successfully!");
