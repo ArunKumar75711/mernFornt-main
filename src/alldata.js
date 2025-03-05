@@ -26,21 +26,21 @@ export default function Alldata(){
 
   
 
-  // function handleEdit(item) {
-  //   setEditId(item._id);
-  //   setFormData({userid : item.userid, name: item.name, email: item.email, password: item.password, amount: item.amount });
-  // }
+  function handleEdit(item) {
+    setEditId(item._id);
+    setFormData({userid : item.userid, name: item.name, email: item.email, password: item.password, amount: item.amount });
+  }
 
-  // async function handleUpdate() {
-  //   try {
-  //     await axios.put(`https://mernback-main-1.onrender.com/update/${editId}`, formData);
-  //     setData(data.map((item) => (item._id === editId ? { ...item, ...formData } : item)));
-  //     setEditId(null);
-  //     alert("Updated successfully!");
-  //   } catch (error) {
-  //     console.error("Error updating:", error);
-  //   }
-  // }
+  async function handleUpdate() {
+    try {
+      await axios.put(`https://mernback-main-1.onrender.com/update/${editId}`, formData);
+      setData(data.map((item) => (item._id === editId ? { ...item, ...formData } : item)));
+      setEditId(null);
+      alert("Updated successfully!");
+    } catch (error) {
+      console.error("Error updating:", error);
+    }
+  }
 
   return(
     <>
@@ -67,7 +67,7 @@ export default function Alldata(){
           <td>{item.password}</td>
           <td>{item.amount}</td>
           <td>
-                   // <Button variant="success" onClick={() => handleEdit(item)}>Edit</Button>
+                   <Button variant="success" onClick={() => handleEdit(item)}>Edit</Button>
               <Button onClick={()=>handleDelete(index)}>Delete</Button></td>
         </tr>)
         }
@@ -76,16 +76,16 @@ export default function Alldata(){
         </Table>
 
           
-      // {editId && (
-      //   <div>
-      //     <h2>Edit Data</h2>
-      //     <input  type="text"  value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-      //     <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-      //     <input type="password" value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
-      //     <input type="number" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
-      //     <button onClick={handleUpdate}>Update</button>
-      //   </div>
-      // )}
+      {editId && (
+        <div>
+          <h2>Edit Data</h2>
+          <input  type="text"  value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+          <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+          <input type="password" value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
+          <input type="number" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
+          <button onClick={handleUpdate}>Update</button>
+        </div>
+      )}
     
     </>
   )
