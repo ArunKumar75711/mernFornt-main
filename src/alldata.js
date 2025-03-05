@@ -6,6 +6,7 @@ import {Table,Button} from 'react-bootstrap'
 export default function Alldata(){
   
   const [data,setData]=useState([])
+  const [editId , setEditId ] = useState()
  
 
   useEffect(()=>{
