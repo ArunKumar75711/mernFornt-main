@@ -24,7 +24,7 @@ export default function Withdraw(){
                 if(data[i].amount>0){
                     data[i].amount=Number(data[i].amount)-Number(withdraw);
                     let updateData={amount:data[i].amount};
-                   let url=`https://mernback-zh3d.onrender.com/update/${data[i]._id}`
+                   let url=`https://mernback-main.onrender.com/update/${data[i]._id}`
                     axios.put(url,updateData);
                     alert(`Rs.${withdraw} Amount Withdraw on Your Account`)
                 }
